@@ -16,7 +16,7 @@ class App extends Component {
   render() {
     return (
       <StyleProvider style={getTheme(material)}>
-          <TabNavigator />
+          <RouterFlux />
       </StyleProvider>
     )
   }

@@ -44,7 +44,7 @@ export default class PromoView extends Component {
       <View>
         <Text>Promo</Text>
         <AppSwiper />
-        <Button onPress={() => Actions.promodetail()}><Text>Test</Text></Button>
+        <Button onPress={() => Actions.jancuk()}><Text>Test</Text></Button>
       </View>
     )
   }
