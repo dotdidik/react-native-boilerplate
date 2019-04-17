@@ -8,8 +8,8 @@ import { Container } from "native-base";
 const TabNavigator = createBottomTabNavigator(
   {
     Home: ScreenHome,
-    Products: ScreenProducts,
-    Data: ScreenProfile
+    One: ScreenProducts,
+    Two: ScreenProfile
   },
   {
     tabBarPosition: "bottom",
@@ -27,13 +27,13 @@ const TabNavigator = createBottomTabNavigator(
   }
 );
 
-const CekAjah = createAppContainer(TabNavigator);
+const TabNav = createAppContainer(TabNavigator);
 
 class AppTab extends Component {
   render() {
     return (
       <Container>
-        <CekAjah />
+        <TabNav />
       </Container>
     );
   }

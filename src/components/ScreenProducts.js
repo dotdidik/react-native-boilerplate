@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
-import {View, Text, Container, Content} from 'native-base'
-import AppHeader from './common/AppHeader';
-import ProductTabs from './products/ProductsTab';
+import {Text, Container} from 'native-base'
 export default class ScreenProducts extends Component {
   render() {
     return (
       <Container>
-        <ProductTabs />
+        <Text>One</Text>
       </Container>
     )
   }

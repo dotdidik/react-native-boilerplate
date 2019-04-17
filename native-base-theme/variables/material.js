@@ -148,7 +148,7 @@ export default {
   tabActiveBgColor: "#3F51B5",
 
   // Header
-  toolbarBtnColor: "#000",
+  toolbarBtnColor: "#fff",
   toolbarDefaultBg: "#135589",
   toolbarHeight: 56,
   toolbarSearchIconSize: 23,
