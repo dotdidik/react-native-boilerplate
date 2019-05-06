@@ -1,0 +1,12 @@
+export const GET_DATA = 'GET_DATA';
+export const GET_NEWS = 'GET_NEWS';
+export const GET_NEWS_SUCCESS = 'GET_NEWS_SUCCESS';
+
+//auth 
+export const SESSION_RESTORING = 'SESSION_RESTORING';
+export const SESSION_LOADING = 'SESSION_LOADING';
+export const SESSION_SUCCESS = 'SESSION_SUCCESS';
+export const SIGNUP_SUCCESS = 'SIGNUP_SUCCESS';
+export const SESSION_ERROR = 'SESSION_ERROR';
+export const SESSION_LOGOUT = 'SESSION_LOGOUT';
+export const SESSION_UPDATE = 'SESSION_UPDATE';

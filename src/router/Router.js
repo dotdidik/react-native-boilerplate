@@ -3,26 +3,77 @@ import { createBottomTabNavigator, createAppContainer } from "react-navigation";
 import ScreenHome from "../components/ScreenHome";
 import ScreenProducts from "../components/ScreenProducts";
 import ScreenProfile from "../components/ScreenProfile";
-import { Container } from "native-base";
 
-const TabNavigator = createBottomTabNavigator(
+import { createMaterialBottomTabNavigator } from "react-navigation-material-bottom-tabs";
+import { Container ,Icon } from 'native-base';
+import { Platform } from 'react-native'
+import Three from "../components/Three";
+
+const TabNavigator = createMaterialBottomTabNavigator(
   {
-    Home: ScreenHome,
-    One: ScreenProducts,
-    Two: ScreenProfile
+    Home: {
+      screen: ScreenHome,
+      navigationOptions: {
+        tabBarLabel: 'Home',
+        tabBarIcon: ({ tintColor, focused }) => (
+          <Icon 
+            size={20} 
+            name={ Platform.OS === 'android' ? 
+            ( focused ? 'ios-home' : 'ios-home' ) : 'ios-home'}  
+            style={{ color: tintColor }}
+          />
+        )
+      }
+    },
+    News: {
+      screen: Three,
+      navigationOptions: {
+        tabBarLabel: 'News',
+        tabBarIcon: ({ tintColor, focused }) => (
+          <Icon 
+            size={20} 
+            name={ Platform.OS === 'android' ? 
+            ( focused ? 'paper' : 'paper' ) : 'paper'}  
+            style={{ color: tintColor }}
+          />
+        )
+      }
+    },
+    Products: {
+      screen: ScreenProducts,
+      navigationOptions: {
+        tabBarLabel: 'Products',
+        tabBarIcon: ({ tintColor, focused }) => (
+          <Icon 
+            size={20} 
+            name={ Platform.OS === 'android' ? 
+            ( focused ? 'ios-home' : 'ios-home' ) : 'ios-home'}  
+            style={{ color: tintColor }}
+          />
+        )
+      }
+    },
+    Profile: {
+      screen: ScreenProfile,
+      navigationOptions: {
+        tabBarLabel: 'Profile',
+        tabBarIcon: ({ tintColor, focused }) => (
+          <Icon 
+            size={20} 
+            name={ Platform.OS === 'android' ? 
+            ( focused ? 'ios-home' : 'ios-home' ) : 'ios-home'}  
+            style={{ color: tintColor }}
+          />
+        )
+      }
+    }
   },
   {
-    tabBarPosition: "bottom",
-    swipeEnabled: true,
-    lazy: true,
-    tabBarOptions: {
-      activeTintColor: "#f2f2f2",
-      activeBackgroundColor: "#135589",
-      inactiveTintColor: "#666",
-      labelStyle: {
-        fontSize: 18,
-        padding: 12
-      }
+    initialRouteName: 'Home',
+    activeColor: 'blue',
+    inactiveColor: '#BBBBBB',
+    barStyle: {
+      backgroundColor: '#fff'
     }
   }
 );
